@@ -7,13 +7,6 @@ namespace UKParliament.CodeTest.Web.Controllers;
 [Route("api/[controller]")]
 public class PersonController : ControllerBase
 {
-    private readonly ILogger<PersonController> _logger;
-
-    public PersonController(ILogger<PersonController> logger)
-    {
-        _logger = logger;
-    }
-
     [Route("{id:int}")]
     [HttpGet]
     public ActionResult<PersonViewModel> GetById(int id)
