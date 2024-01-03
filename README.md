@@ -1,9 +1,9 @@
-# UK Parliament - Software Engineering
+# UK Parliament - Product Team Developer Home Exercise
 
 ## Dependencies
 Please ensure you have the following installed:
-* .Net 6 SDK
-* Node v16.18.0 (min version)
+* .Net 8 SDK
+* Node v18.4.0 (min version)
 
 ## Introduction
 
