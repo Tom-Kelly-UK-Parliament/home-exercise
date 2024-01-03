@@ -1,9 +1,8 @@
-﻿namespace UKParliament.CodeTest.Data
-{
-    public class Department
-    {
-        public int Id { get; set; }
+﻿namespace UKParliament.CodeTest.Data;
 
-        public string Name { get; set; }
-    }
+public class Department
+{
+    public int Id { get; set; }
+
+    public string Name { get; set; }
 }

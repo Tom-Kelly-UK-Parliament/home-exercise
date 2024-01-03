@@ -1,6 +1,6 @@
-import {Component, Inject} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {PersonViewModel} from "../../models/person-view-model";
+import { Component, Inject } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { PersonViewModel } from "../../models/person-view-model";
 
 @Component({
   selector: 'app-home',

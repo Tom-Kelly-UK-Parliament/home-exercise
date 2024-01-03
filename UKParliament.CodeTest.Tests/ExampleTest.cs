@@ -1,13 +1,12 @@
 ﻿using Xunit;
 
-namespace UKParliament.CodeTest.Tests
+namespace UKParliament.CodeTest.Tests;
+
+public class ExampleTest
 {
-    public class ExampleTest
+    [Fact]
+    public void Test1()
     {
-        [Fact]
-        public void Test1()
-        {
-            Assert.True(true);
-        }
+        Assert.True(true);
     }
 }

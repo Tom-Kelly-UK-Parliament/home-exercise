@@ -1,7 +1,6 @@
-﻿namespace UKParliament.CodeTest.Services
-{
-    public interface IPersonService
-    {
+﻿namespace UKParliament.CodeTest.Services;
 
-    }
+public interface IPersonService
+{
+
 }

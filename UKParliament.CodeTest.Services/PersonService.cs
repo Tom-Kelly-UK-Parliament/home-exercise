@@ -1,7 +1,6 @@
-﻿namespace UKParliament.CodeTest.Services
-{
-    public class PersonService : IPersonService
-    {
+﻿namespace UKParliament.CodeTest.Services;
 
-    }
+public class PersonService : IPersonService
+{
+
 }
