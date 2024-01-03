@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using UKParliament.CodeTest.Data;
 using UKParliament.CodeTest.Services;
 
@@ -19,6 +20,13 @@ namespace UKParliament.CodeTest.Web
             builder.Services.AddScoped<IPersonService, PersonService>();
 
             var app = builder.Build();
+
+            // Create database so the data seeds
+            using (var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                using var context = serviceScope.ServiceProvider.GetRequiredService<PersonManagerContext>();
+                context.Database.EnsureCreated();
+            }
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
