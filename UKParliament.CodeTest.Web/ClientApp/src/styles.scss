@@ -1,16 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+$colour-purple: #373151;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem 0;
 }
 
-code {
-  color: #e01a76;
+h1, h2, h3, h4, h5 {
+  color: $colour-purple;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+strong.highlight {
+  color: $colour-purple;
+}
+
+table {
+  thead {
+    th {
+      color: $colour-purple !important;
+      vertical-align: top;
+    }
+  }
+}
+
+.table-responsive {
+    overflow-x: auto;
+
+    .table {
+        min-width: 600px;
+    }
 }
