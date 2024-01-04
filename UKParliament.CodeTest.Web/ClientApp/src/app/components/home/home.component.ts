@@ -1,6 +1,5 @@
-import { Component, Inject } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
-import { PersonViewModel } from "../../models/person-view-model";
+import { Component } from '@angular/core';
+import { PersonService } from '../../services/person.service';
 
 @Component({
   selector: 'app-home',
@@ -8,15 +7,13 @@ import { PersonViewModel } from "../../models/person-view-model";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
-  // Below is some sample code to help get you started calling the API
-
-  constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
+  constructor(private personService: PersonService) {
     this.getPersonById(1);
   }
 
   getPersonById(id: number): void {
-    this.http.get<PersonViewModel[]>(this.baseUrl + `api/person/${id}`).subscribe(result => {
-    }, error => console.error(error));
+    this.personService.getById(id).subscribe(
+      result => console.info(`User returned: ${JSON.stringify(result)}`),
+      error => console.error(`Error: ${error}`));
   }
 }
